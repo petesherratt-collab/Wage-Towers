@@ -1,0 +1,40 @@
+name: Reproducibility checks
+
+# Runs every documented check from a clean clone. Development checks were
+# originally run on Windows, so both Linux and Windows are exercised.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ['3.10', '3.12']
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Restore archived JSON artefacts (verifies hashes)
+        run: python work/restore_outputs.py
+      - name: v0.3 structural tests
+        run: python -B work/test_employer_v03.py
+      - name: v0.3 replay of saved run-001
+        run: python -B work/verify_employer_v03.py
+      - name: v0.2 regression tests
+        run: python -B work/test_longitudinal_v02.py
+      - name: v0.4 noise and firm-size tests
+        run: python -B work/test_noise_v04.py
+      - name: Original tower simulator checks
+        run: node work/wage-towers/test.cjs

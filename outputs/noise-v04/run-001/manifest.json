@@ -1,0 +1,387 @@
+{
+  "command": "python -B work/run_noise_v04.py --out outputs/noise-v04/run-001",
+  "date": "2026-11-25",
+  "cases": [
+    "no_adoption",
+    "immediate_review",
+    "quarterly_budget_cycle",
+    "costly_adjustment",
+    "low_retention_value",
+    "high_retention_value",
+    "uneconomic_new_work",
+    "valuable_new_work",
+    "new_work_later_automated",
+    "attrition_no_layoffs",
+    "demand_absorption",
+    "demand_expansion",
+    "external_demand_slump",
+    "known_external_efficiency",
+    "hidden_external_efficiency",
+    "ambiguous_ai",
+    "ambiguous_external"
+  ],
+  "defaults": {
+    "review": 1,
+    "layoff_cost": 15000,
+    "hire_cost": 500,
+    "option_value": 0,
+    "new_value": 0,
+    "new_hours": 2000,
+    "pursue": false,
+    "attrition_only": false,
+    "demand": 1,
+    "rebound": 1,
+    "external_efficiency": 0,
+    "ai": true,
+    "size": 10
+  },
+  "sizes": [
+    10,
+    100
+  ],
+  "sigma_demand": [
+    0,
+    0.03,
+    0.06
+  ],
+  "sigma_hours": [
+    0,
+    0.03
+  ],
+  "thresholds": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+  ],
+  "seed_rule": "one seed when both sigmas are zero; otherwise seeds 0-39. Simulation seed is 0 when sigma_demand is zero.",
+  "publication": "immediate",
+  "flow_rule": "cumulative",
+  "evaluated_at": "q12",
+  "split": "development only; no holdout",
+  "cells": [
+    {
+      "size": 10,
+      "sigma_demand": 0,
+      "sigma_hours": 0,
+      "threshold": 0.05,
+      "seeds": 1
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0,
+      "sigma_hours": 0,
+      "threshold": 0.1,
+      "seeds": 1
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0,
+      "sigma_hours": 0,
+      "threshold": 0.2,
+      "seeds": 1
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0,
+      "sigma_hours": 0.03,
+      "threshold": 0.05,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0,
+      "sigma_hours": 0.03,
+      "threshold": 0.1,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0,
+      "sigma_hours": 0.03,
+      "threshold": 0.2,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0.03,
+      "sigma_hours": 0,
+      "threshold": 0.05,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0.03,
+      "sigma_hours": 0,
+      "threshold": 0.1,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0.03,
+      "sigma_hours": 0,
+      "threshold": 0.2,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0.03,
+      "sigma_hours": 0.03,
+      "threshold": 0.05,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0.03,
+      "sigma_hours": 0.03,
+      "threshold": 0.1,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0.03,
+      "sigma_hours": 0.03,
+      "threshold": 0.2,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0.06,
+      "sigma_hours": 0,
+      "threshold": 0.05,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0.06,
+      "sigma_hours": 0,
+      "threshold": 0.1,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0.06,
+      "sigma_hours": 0,
+      "threshold": 0.2,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0.06,
+      "sigma_hours": 0.03,
+      "threshold": 0.05,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0.06,
+      "sigma_hours": 0.03,
+      "threshold": 0.1,
+      "seeds": 40
+    },
+    {
+      "size": 10,
+      "sigma_demand": 0.06,
+      "sigma_hours": 0.03,
+      "threshold": 0.2,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0,
+      "sigma_hours": 0,
+      "threshold": 0.05,
+      "seeds": 1
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0,
+      "sigma_hours": 0,
+      "threshold": 0.1,
+      "seeds": 1
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0,
+      "sigma_hours": 0,
+      "threshold": 0.2,
+      "seeds": 1
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0,
+      "sigma_hours": 0.03,
+      "threshold": 0.05,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0,
+      "sigma_hours": 0.03,
+      "threshold": 0.1,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0,
+      "sigma_hours": 0.03,
+      "threshold": 0.2,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0.03,
+      "sigma_hours": 0,
+      "threshold": 0.05,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0.03,
+      "sigma_hours": 0,
+      "threshold": 0.1,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0.03,
+      "sigma_hours": 0,
+      "threshold": 0.2,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0.03,
+      "sigma_hours": 0.03,
+      "threshold": 0.05,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0.03,
+      "sigma_hours": 0.03,
+      "threshold": 0.1,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0.03,
+      "sigma_hours": 0.03,
+      "threshold": 0.2,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0.06,
+      "sigma_hours": 0,
+      "threshold": 0.05,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0.06,
+      "sigma_hours": 0,
+      "threshold": 0.1,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0.06,
+      "sigma_hours": 0,
+      "threshold": 0.2,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0.06,
+      "sigma_hours": 0.03,
+      "threshold": 0.05,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0.06,
+      "sigma_hours": 0.03,
+      "threshold": 0.1,
+      "seeds": 40
+    },
+    {
+      "size": 100,
+      "sigma_demand": 0.06,
+      "sigma_hours": 0.03,
+      "threshold": 0.2,
+      "seeds": 40
+    }
+  ],
+  "source_hashes": {
+    "research/experiment-plan-v04.md": "6f2683563633e7aaf44fa21c7c0ec035e7dcddc7a407cb56c18bbc24f6b53e50",
+    "work/employer_measurement_v03.py": "43c90e725f98619699bd7a1f25cae9e1f1b6d9ed5fb20a0a03583fab98f76528",
+    "work/employer_measurement_v04.py": "c469f555b2cbc7d2dbe39bfa2c74e9c9b7d65081e3a8ec2a80f81c00e9a7e438",
+    "work/employer_model_v03.py": "5fa29544e47b67b1e4dc88e59e6a34b3f125f1a11fa27a02bac9c56fe521d6a8",
+    "work/employer_model_v04.py": "f2912d5c5d63f502f1320b4b703745358608dfc9e00fc38a0d22a155bb494e70",
+    "work/run_noise_v04.py": "b5ca66ae9eab7a33ab958b7aca46df6e1670fd52ac9c2559b69fb74226647516",
+    "work/test_noise_v04.py": "913bc85b120d3c74fd9837d1c1a0747ca6276888fd5e84a8ed860f2695885a2b"
+  },
+  "preserved_output_hashes": {
+    "outputs/employer-v03/run-001/assessments.json": "040d68987f27823f5573254ce6adb1a26c3d4155bf648f65888ac8914617a9c2",
+    "outputs/employer-v03/run-001/evaluation.json": "b67d8b6ab3002a5510bf93a7e46759e542c7e3e8d8995d4875412ab49585e5f7",
+    "outputs/employer-v03/run-001/manifest.json": "50e9e49348bb08a0fc81b5186feec9450f1adebb04345b90810663b767ae286c",
+    "outputs/employer-v03/run-001/observations.json": "93e747ed568a63d0f061a8d5f9521318da6bb4772209f4d3382a66e8490adb3b",
+    "outputs/employer-v03/run-001/results.md": "3bfbf8194044b5ed0194d7c5e71e4e4f5bcb332479830cfb392edab6ad32ac9a",
+    "outputs/employer-v03/run-001/truth.json": "8e83ae61debd5108264366e58d37eeb7c431276258570703c4dc8fd712a175f2",
+    "outputs/longitudinal-v02/run-001/assessments.json": "475aedcfaf004612f596d0bc8de8998d058b907d265cba2c95dcb561ce342159",
+    "outputs/longitudinal-v02/run-001/evaluation.json": "939025fc7771797143e649a76d2df5fa64fe0d8a37a167f7e34a66acf76fb70c",
+    "outputs/longitudinal-v02/run-001/manifest.json": "d9388b0ba711c473b1573222b2936ad199d3e07881457cf3ae0a1a0c458fa29e",
+    "outputs/longitudinal-v02/run-001/observations.json": "dc7f132789cf2692169a6d63d6e7110a24e4bf0d06fb1d5ee9aa058e351dafa1",
+    "outputs/longitudinal-v02/run-001/results.md": "aaf05c75d2ec50e1c405d3ed51690afacec8791b178042e9eeec90f00b1e85ad",
+    "outputs/longitudinal-v02/run-001/truth.json": "7f32c2de9c2ca6c884a089e2ed4072f0ec901d9e8e990c22d4ea85466a901eb1",
+    "outputs/synthetic-indicator/Findings-and-rules.md": "f891faf65ad444703f5eaf8bc037376c9d58696df820551c2c6b668aa3fc4805",
+    "outputs/synthetic-indicator/evidence-loss-experiments.json": "d4d6daff892c1c47f111fed9768e8c15142d8f37d113c51be50084b091edcb51",
+    "outputs/synthetic-indicator/ground-truth.json": "ab463d116ab3863306499fc8989486cfdfadb078069494e2457e153771372525",
+    "outputs/synthetic-indicator/indicator-results.json": "be9b4c6558951d5889ac20a240a37ba84f22aba3db8af1f8d25de828d3409f91",
+    "outputs/synthetic-indicator/observable-evidence.json": "dd87d18aa4ce0f656a6cce78e57eef3f0b30a6da722574c8acdcb688e885d2f8"
+  },
+  "raw_data": "not saved; regenerate deterministically from this manifest",
+  "repository": "https://github.com/petesherratt-collab/Wage-Towers"
+}
