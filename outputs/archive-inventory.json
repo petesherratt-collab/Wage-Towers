@@ -1,0 +1,53 @@
+{
+  "archive_sha256": "1a670f32c65f379f17a44892bf87cddc00019e8fcf7dd16ed85734e3b02323e4",
+  "files": {
+    "outputs/employer-v03/run-001/assessments.json": {
+      "bytes": 20644161,
+      "sha256": "040d68987f27823f5573254ce6adb1a26c3d4155bf648f65888ac8914617a9c2"
+    },
+    "outputs/employer-v03/run-001/evaluation.json": {
+      "bytes": 280605,
+      "sha256": "b67d8b6ab3002a5510bf93a7e46759e542c7e3e8d8995d4875412ab49585e5f7"
+    },
+    "outputs/employer-v03/run-001/observations.json": {
+      "bytes": 1685101,
+      "sha256": "93e747ed568a63d0f061a8d5f9521318da6bb4772209f4d3382a66e8490adb3b"
+    },
+    "outputs/employer-v03/run-001/truth.json": {
+      "bytes": 580475,
+      "sha256": "8e83ae61debd5108264366e58d37eeb7c431276258570703c4dc8fd712a175f2"
+    },
+    "outputs/longitudinal-v02/run-001/assessments.json": {
+      "bytes": 16127787,
+      "sha256": "475aedcfaf004612f596d0bc8de8998d058b907d265cba2c95dcb561ce342159"
+    },
+    "outputs/longitudinal-v02/run-001/evaluation.json": {
+      "bytes": 125381,
+      "sha256": "939025fc7771797143e649a76d2df5fa64fe0d8a37a167f7e34a66acf76fb70c"
+    },
+    "outputs/longitudinal-v02/run-001/observations.json": {
+      "bytes": 4311780,
+      "sha256": "dc7f132789cf2692169a6d63d6e7110a24e4bf0d06fb1d5ee9aa058e351dafa1"
+    },
+    "outputs/longitudinal-v02/run-001/truth.json": {
+      "bytes": 137651,
+      "sha256": "7f32c2de9c2ca6c884a089e2ed4072f0ec901d9e8e990c22d4ea85466a901eb1"
+    },
+    "outputs/synthetic-indicator/evidence-loss-experiments.json": {
+      "bytes": 1452230,
+      "sha256": "d4d6daff892c1c47f111fed9768e8c15142d8f37d113c51be50084b091edcb51"
+    },
+    "outputs/synthetic-indicator/ground-truth.json": {
+      "bytes": 5209,
+      "sha256": "ab463d116ab3863306499fc8989486cfdfadb078069494e2457e153771372525"
+    },
+    "outputs/synthetic-indicator/indicator-results.json": {
+      "bytes": 5707,
+      "sha256": "be9b4c6558951d5889ac20a240a37ba84f22aba3db8af1f8d25de828d3409f91"
+    },
+    "outputs/synthetic-indicator/observable-evidence.json": {
+      "bytes": 30985,
+      "sha256": "dd87d18aa4ce0f656a6cce78e57eef3f0b30a6da722574c8acdcb688e885d2f8"
+    }
+  }
+}

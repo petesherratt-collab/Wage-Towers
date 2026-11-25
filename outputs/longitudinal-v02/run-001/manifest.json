@@ -1,0 +1,37 @@
+{
+  "command": "python work/longitudinal_indicator_v02.py --out outputs/longitudinal-v02/run-001",
+  "seed": null,
+  "randomness": "none; exhaustive designed grid",
+  "periods": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "scenarios": 23,
+  "runs": 1242,
+  "assessments": 13662,
+  "hashes": {
+    "work\\longitudinal_indicator_v02.py": "8cf4ac1bc0feeae74236049b40b54b16e190fe24dfc7d8ee2dcbc3b503338bd3",
+    "research\\experiment-plan-v02.md": "4428dcc2d3d72647cb68c099830faee38854c45aa2184da31b7db7afc3f116c5",
+    "work\\wage-towers\\dist\\model.js": "d3f189f0c092c01783a2bf2fbfb1e8dc3eb4d73029ad9114b050e455fa0e4517",
+    "work\\wage-towers\\test.cjs": "af645de35a642a203ecd915fa6b9d6ec966154791f4141200bc62f3d3d8ba2f8",
+    "work\\synthetic_indicator.py": "fae10d8a356cdba3cd01a39a16744ca61c8f6933a85d8a9b0b78f6bb07a4e7a4"
+  },
+  "baseline_hashes": {
+    "outputs\\synthetic-indicator\\evidence-loss-experiments.json": "d4d6daff892c1c47f111fed9768e8c15142d8f37d113c51be50084b091edcb51",
+    "outputs\\synthetic-indicator\\Findings-and-rules.md": "f891faf65ad444703f5eaf8bc037376c9d58696df820551c2c6b668aa3fc4805",
+    "outputs\\synthetic-indicator\\ground-truth.json": "ab463d116ab3863306499fc8989486cfdfadb078069494e2457e153771372525",
+    "outputs\\synthetic-indicator\\indicator-results.json": "be9b4c6558951d5889ac20a240a37ba84f22aba3db8af1f8d25de828d3409f91",
+    "outputs\\synthetic-indicator\\observable-evidence.json": "dd87d18aa4ce0f656a6cce78e57eef3f0b30a6da722574c8acdcb688e885d2f8"
+  },
+  "split": "development only; no holdout",
+  "assertions": "passed"
+}

@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+!.env.example
+.publish/
+# Raw data are preserved losslessly in reproducible-data.zip.
+outputs/**/*.json
+!outputs/**/manifest.json
+!outputs/archive-inventory.json
