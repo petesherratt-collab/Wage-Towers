@@ -9,7 +9,8 @@ Wage Towers compares candidate indicators for paid hours, hiring, layoffs and wa
 **Level 1** supports replacement of identifiable human task effort. **Level 2** supports AI plausibly contributing to a specific employment or wage consequence. These are separate claims: task replacement need not cause displacement. Wage bricks are an explanatory metaphor, not tasks or a causal model.
 
 ## Start here
-- research/noise-experiment-v04.md: latest experiment; tests the v0.3 rules against demand noise, an imperfect comparator, reporting error and a 100-worker firm.
+- research/literature-experiment-v05.md: latest experiment; grounds cases in Acemoglu–Restrepo, Humlum–Vestergaard, the Canaries study and Yale's cyclicality concern, compares single-peer, difference-in-differences and simplified synthetic-control comparisons, and assesses a public reimplementation of Anthropic's economic-scenarios model.
+- research/noise-experiment-v04.md: v0.4 experiment; tests the v0.3 rules against demand noise, an imperfect comparator, reporting error and a 100-worker firm.
 - research/employer-experiment-v03.md: v0.3 experiment on employer decisions, attrition, new-work automation and uneven reporting.
 - outputs/employer-v03/run-001/results.md: v0.3 results; adjacent files retain the full audit trail.
 - research/theory-and-indicators-v02.md: current definitions, evidence requirements, candidate portfolio and evaluation findings.
@@ -37,6 +38,7 @@ python -B work/test_employer_v03.py
 python -B work/verify_employer_v03.py
 python -B work/test_longitudinal_v02.py
 python -B work/test_noise_v04.py
+python -B work/test_literature_v05.py
 node work/wage-towers/test.cjs
 ```
 
@@ -48,6 +50,7 @@ Generate a new experiment without overwriting preserved results:
 python -B work/run_employer_v03.py --out outputs/employer-v03/run-002
 python -B work/longitudinal_indicator_v02.py --out outputs/longitudinal-v02/run-002
 python -B work/run_noise_v04.py --out outputs/noise-v04/run-002
+python -B work/run_literature_v05.py --out outputs/literature-v05/run-002
 ```
 
 The runners refuse existing destinations. **Do not run `work/synthetic_indicator.py` against the preserved baseline:** the original generator writes directly to `outputs/synthetic-indicator`. Change its destination in a separate experimental copy first.
@@ -58,13 +61,15 @@ For the original visual simulator, open [work/wage-towers/dist/index.html](work/
 
 Reports and manifests are directly readable under `outputs/`. The large JSON artefacts are stored in `outputs/reproducible-data.zip` at their original paths. The restore command checks the archive and individual file hashes, rejects unsafe paths and never overwrites differing existing data. Restored raw JSON is ignored by Git. Original source line endings are preserved because historical manifests hash exact bytes.
 
+The v0.5 experiment finds that whether new work would also exist without AI decides attribution and cannot be recovered by any comparison method; that synthetic control cuts cyclical false alerts from 63% to 13% of harmless adopters where plain difference-in-differences fails; and that no method handles comparators contaminated by AI spillovers.
+
 The v0.4 noise experiment (36 cells, 2,754 seeded histories) finds the 10% paid-hours rule survives mild i.i.d. demand noise and reporting error, but a 5% cutoff does not; noise-driven false alerts occur only in firms that genuinely adopted AI. Persistent shocks are untested. Its metrics are in `outputs/noise-v04/run-001/metrics.csv`; raw histories regenerate deterministically from the manifest.
 
 The v0.3 experiment includes 23 histories, 690 variants and 8,970 assessments. Staffing choices respond to retained capacity, valuable new work, attrition and costs. Hidden non-AI efficiency still causes a false attribution. These are model demonstrations, not population estimates.
 
 Historical documents describe the state at the time of each experiment, including its then-local-only status. Repository publication does not change those findings or launch the pilot.
 
-Next priorities: persistent demand shocks, noise-aware attribution bands, endogenous wage setting, shared versus AI-enabled new-work opportunities, uncertain project returns, workforce cohorts and independent comparisons of flow windows and denominators.
+Next priorities: inference and time weights for the synthetic control, contamination diagnostics, observable evidence on shared new-work opportunities, persistent demand shocks, noise-aware attribution bands, endogenous wage setting, shared versus AI-enabled new-work opportunities, uncertain project returns, workforce cohorts and independent comparisons of flow windows and denominators.
 
 ## Licence
 

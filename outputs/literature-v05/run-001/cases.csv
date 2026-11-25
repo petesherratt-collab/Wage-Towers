@@ -1,0 +1,17 @@
+part,case,shared_new_work,comparator,actual_q12,no_ai_q12,true_effect,measured_gap,alert,attribution,hiring_gap,hiring_alert
+A,uneconomic_new_work,False,peer without the opportunity,6,10,True,0.4,True,conditional support,,
+A,uneconomic_new_work,False,peer with the opportunity,6,10,True,0.4,True,conditional support,,
+A,uneconomic_new_work,True,peer without the opportunity,6,10,True,0.4,True,conditional support,,
+A,uneconomic_new_work,True,peer with the opportunity,6,10,True,0.4,True,conditional support,,
+A,valuable_new_work,False,peer without the opportunity,10,10,False,0.0,False,not established,,
+A,valuable_new_work,False,peer with the opportunity,10,10,False,0.0,False,not established,,
+A,valuable_new_work,True,peer without the opportunity,10,14,True,0.0,False,not established,,
+A,valuable_new_work,True,peer with the opportunity,10,14,True,0.2857,True,conditional support,,
+A,new_work_later_automated,False,peer without the opportunity,7,10,True,0.3,True,conditional support,,
+A,new_work_later_automated,False,peer with the opportunity,7,10,True,0.3,True,conditional support,,
+A,new_work_later_automated,True,peer without the opportunity,7,14,True,0.3,True,conditional support,,
+A,new_work_later_automated,True,peer with the opportunity,7,14,True,0.5,True,conditional support,,
+B1 small saving (Humlum-Vestergaard pattern),size 10,,,10,10,False,0.0,False,not established,,
+B1 small saving (Humlum-Vestergaard pattern),size 100,,,95,100,True,0.05,False,not established,,
+B2 cohorts (Canaries pattern),aggregate,,,20,20,False,0.0,False,not established,0.0,False
+B2 cohorts (Canaries pattern),junior cohort,,,5,10,True,0.5,True,conditional support,0.0,False
